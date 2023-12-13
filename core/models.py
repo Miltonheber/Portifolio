@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Projecto(models.Model):
     
-    autor = modes.models.ForeignKey(User, on_delete=models.CASCADE)
+    autor = models.ForeignKey(User, on_delete=models.CASCADE)
     nome = models.CharField('nome', max_length=100, null=False)
     descricao = models.TextField('descriçao', null=False)
     imagem = models.ImageField(null=False, upload_to='prototipos')
