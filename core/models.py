@@ -14,7 +14,7 @@ class Servico(models.Model):
 
 class Habilidade(models.Model):
     ferramenta = models.CharField('ferramenta', null=False, unique=True, max_length=100 )
-    percentagem = models.IntegerField(null=False, max_length=3)
+    percentagem = models.IntegerField(null=False)
     
     def __str__(self):
         return self.ferramenta
