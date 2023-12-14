@@ -25,7 +25,7 @@ class Projecto(models.Model):
     autor = models.ForeignKey(User, on_delete=models.CASCADE)
     nome = models.CharField('nome', max_length=100, null=False)
     descricao = models.TextField('descriçao', null=False)
-    imagem = models.ImageField(null=False, upload_to='prototipos')
+    imagem = models.ImageField(null=False, upload_to='prototipos', default='default.jpg')
     data = models.DateTimeField(auto_now_add=True)
     data_up = models.DateTimeField(auto_now=True)
     url_proj = models.CharField('url do projecto em prod', max_length=200)
